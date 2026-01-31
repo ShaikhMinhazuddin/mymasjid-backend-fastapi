@@ -4,3 +4,4 @@ bcrypt
 supabase
 email_validator
 dotenv
+passlib
