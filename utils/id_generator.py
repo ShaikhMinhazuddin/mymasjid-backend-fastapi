@@ -1,3 +1,4 @@
+
 def generate_mosque_id(mosque_name:str, pincode: str) -> str:
     initials = "".join(
         word[0].upper() for word in mosque_name.split()

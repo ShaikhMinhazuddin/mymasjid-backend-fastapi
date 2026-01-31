@@ -1,3 +1,4 @@
+
 Admin Database {
     adminid : randomly generated
     name : Full Name
