@@ -2,4 +2,4 @@ fastapi
 uvicorn
 bcrypt
 supabase
-dotenv
+email_validator
