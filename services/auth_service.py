@@ -17,7 +17,7 @@ def register_mosque(data):
         "admin_id": str(uuid.uuid4()),
         "name" : data.admin.name,
         "email": data.admin.email,
-        "phno":data.admin.phno,
+        "phone":data.admin.phno,
         "password" : hash_password(data.admin.password),
         "mosque_id" : mosque_id
         }).execute()
