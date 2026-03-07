@@ -22,7 +22,7 @@ def login(email:str, password:str):
     
     admin = result.data
     
-    if not verify_password(password, admin["password_hash"]):
+    if password != admin["password_hash"]:
         raise HTTPException(status_code=401, detail="Invalid Credentials")
     
     return {
