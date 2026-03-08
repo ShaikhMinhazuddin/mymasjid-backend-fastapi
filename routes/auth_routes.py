@@ -15,14 +15,14 @@ def register_mosque_api(data: MosqueRegistration):
 
 @router.post("/login")
 def login(email:str, password:str):
-    result = supabase.table("admin").select("*").eq("email",email).execute()
+    result = supabase.table("admins").select("*").eq("email",email).execute()
     
     if not result.data:
         raise HTTPException(status_code=401, detail ="Invalid Credentials")
     
-    admin = result.data
+    admin = result.data[0]
     
-    if password != admin["password_hash"]:
+    if password != admin["password"]:
         raise HTTPException(status_code=401, detail="Invalid Credentials")
     
     return {
