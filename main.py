@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes.auth_routes import router as auth_router
+from routes.notification_routes import router as notification_router
 
 app = FastAPI(
     title= "MyMasjid",
@@ -20,6 +21,7 @@ app.add_middleware(
 )
 
 app.include_router(auth_router)
+app.include_router(notification_router)
 
 
 @app.get("/")
